@@ -34,26 +34,25 @@ function callRolesApi(element, url, token)
             assignedroles = JSON.parse(apiXMLReq.responseText);
             if (assignedroles.length == 0)
             {
-              row = 'You do not have access to the Internal portal. Please request access on <a href="https://maersk.service-now.com"> SNOW </a>';
+              row = '<h2 class="row">You do not have access to the Internal portal. Please request access on <a href="https://maersk.service-now.com"> SNOW </a> </h2>';
             }
             else
             {
 
               var i = 1;
-              var row='<div class="container"> <h2 class="display-5">Role Information</h2>' ;
+              var row='<h2 class="row">You have access to Maersk portal</h2>' ;
               for ( var s in allroles)
               {
         		    if (assignedroles.includes(allroles[s]))
         		    {
-                        	    row = row + '<div class="row"> <div class="col-6 checkedin-player-name" >' + allroles[s] +  '</div> </div>';
+                        	    row = row + '<div class="row"> <div class="checkedin-player-name" >' + allroles[s] +  '<span class="glyphicon glyphicon-ok"></span></div> </div>';
         		    }
         		    else
         		    {
-                        	    row = row + '<div class="row"> <div class="col-6 checkedout-player-name">' + allroles[s] +  ' </div> </div>';
+                        	    row = row + '<div class="row"> <div class="checkedout-player-name">' + allroles[s] +  '<span class="glyphicon glyphicon-remove"></span> </div> </div>';
         		    }
                   // Do something
               }
-	            row = row + `</div>`;
             }
             document.getElementById(element).innerHTML = row;
 
