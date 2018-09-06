@@ -6,19 +6,7 @@
     <meta name="author" content="">
 
     <link href="dist/css/maeu.css" rel="stylesheet">
-<script>
-function detectMaersk(username)
-{
-    if (username.includes("maersk"))
-    {
-	alert("You are Maersk and will be redirected to Azure");
-	window.location.href = "https://login.microsoftonline.com/maersk.onmicrosoft.com/oauth2/authorize?client_id=91e0c85c-f07a-4206-b514-0cef846596c7&response_type=id_token&redirect_uri=http%3A%2F%2Flocalhost:8080%2Fprofile.html&response_mode=fragment&scope=openid&state=12345&nonce=678910";
-    }
-    else
-	alert("You are not Maersk");
-
-}
-</script>
+<script src="internal.js"> </script>
 
     <!-- Custom styles for this template -->
   </head>
@@ -33,21 +21,21 @@ function detectMaersk(username)
         <div id="main" style="display: block;"><div><div class="col lrg-12">
     <header id="nav" class="page-header page-header--with-background">
 	<div class="page-header__content">
-    
-    
-    
+
+
+
 	    <h1 id="page-heading">Login
-    
-		
-    
-		
-    
+
+
+
+
+
 	    </h1>
-    
-	    
+
+
 	</div>
-    
-    
+
+
     </header></div>
 <section class="row">
     <form class="col lrg-6 med-6" id="login-form" autocomplete="off" novalidate="novalidate">
@@ -55,16 +43,16 @@ function detectMaersk(username)
 	    <div class="row inline-field inline-field--inline-link-wrapper">
 		<a href="javascript:void(0);" id="forgot-username" class="inline-field__link">Forgot username?</a>
 		<div class="form__element  input__with-icon-inside">
-		
+
 		    <label for="username">Username
-			
-		        
-		        
+
+
+
 		    </label>
 		    <div class="input__with-icon-inside__inner">
 		        <div class="input__with-icon-inside__inner__icon">
 		            <span class="icon icon-account " aria-hidden="true"></span>
-		            
+
 		            <span class="screen-reader-only">account_icon</span>        </div>
 		        <input type="text" value="" class="" id="username" name="username" autocomplete="off" required="" data-validation-label="USI_USER.LOGIN._USERNAME_FIELD_LABEL" no-validate="" aria-required="true" onchange="detectMaersk(this.value)">
 		    </div>
@@ -72,16 +60,16 @@ function detectMaersk(username)
 	    <div class="row inline-field inline-field--inline-link-wrapper">
 		<a href="javascript:void(0);" id="forgot-password" class="inline-field__link">Forgot password?</a>
 		<div class="form__element  input__with-icon-inside">
-		
+
 		    <label for="password">Password
-			
-		        
-		        
+
+
+
 		    </label>
 		    <div class="input__with-icon-inside__inner">
 		        <div class="input__with-icon-inside__inner__icon">
 		            <span class="icon icon-lock-locked " aria-hidden="true"></span>
-		            
+
 		            <span class="screen-reader-only">lock-locked_icon</span>        </div>
 		        <input type="password" value="" class="" id="password" name="password" autocomplete="off" required="" data-validation-label="USI_USER.LOGIN._PASSWORD_FIELD_LABEL" no-validate="" aria-required="true">
 		    </div>
@@ -93,12 +81,12 @@ function detectMaersk(username)
 		        <label class="checkbox__label checkbox__display" for="rememberMe" data-attach-point="label">
 		            <span class="checkbox__icon"></span>
 		            Remember my username
-		            
+
 		        </label>
 		    </div>
-		
+
 		</div>
-		
+
 	    </div>
 	    <div class="row">
 		    <button type="submit" id="loginBtn" aria-disabled="false" class="button button--primary button--right button--mobile-full ">

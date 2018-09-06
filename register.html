@@ -5,6 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <script src="internal.js"></script>
     <link href="dist/css/maeu.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -21,21 +22,21 @@
         <div id="main" style="display: block;"><div><div class="col lrg-12">
     <header id="nav" class="page-header page-header--with-background">
 	<div class="page-header__content">
-    
-    
-    
+
+
+
 	    <h1 id="page-heading">Register
-    
-		
-    
-		
-    
+
+
+
+
+
 	    </h1>
-    
-	    
+
+
 	</div>
-    
-    
+
+
     </header></div>
 
 <section class="row">
@@ -50,43 +51,43 @@
 		</legend>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="user-name">Desired username
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
-			<input type="text" value="" class="" id="user-name" name="userName" autocomplete="off" required="" minlength="5" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._USERNAME_FIELD_LABEL" no-validate="" aria-required="true">
+
+			<input type="text" value="" class="" id="user-name" name="userName" autocomplete="off" required="" minlength="5" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._USERNAME_FIELD_LABEL" no-validate="" aria-required="true" onchange="detectMaersk(this.value)" >
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="first-name">First name
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="first-name" name="firstName" autocomplete="off" required="" minlength="2" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._FIRSTNAME_FIELD_LABEL" no-validate="" aria-required="true">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="last-name">Last name
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="last-name" name="lastName" autocomplete="off" required="" minlength="2" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._LASTNAME_FIELD_LABEL" no-validate="" aria-required="true">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="email">Email</label>
-		    
-			<input type="email" value="" class="" id="email" name="email" autocomplete="off" required="" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._EMAIL_FIELD_LABEL" no-validate="" aria-required="true">
+
+			<input type="email" value="" class="" id="email" name="email" autocomplete="off" required="" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._EMAIL_FIELD_LABEL" no-validate="" aria-required="true" onchange="detectMaersk(this.value)" >
 		    </div>		</div>
 	    </fieldset>
 
@@ -96,101 +97,101 @@
 		</legend>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-name">Company
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-name" name="companyName" autocomplete="off" required="" minlength="2" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._COMPANY_NAME_FIELD_LABEL" no-validate="" aria-required="true">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-department">Department
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-department" name="companyDepartment" autocomplete="off" required="" minlength="2" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._DEPARTMENT_NAME_FIELD_LABEL" no-validate="" aria-required="true">
 		    </div>		</div>
 		<div class="row typeahead-container--fixed-height-results" id="country-selection"><div class="form__element ">
 
 	<label for="company-country">Country
-            
-            
-            
-	    
+
+
+
+
         </label>
 
     <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" value="" class="typeahead  tt-hint" autocomplete="off" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._COUNTRY_FIELD_LABEL" no-validate="" data-service="" data-set="" data-typeahead-key="search" data-attach-point="input" readonly="" spellcheck="false" tabindex="-1" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);" dir="ltr"><input type="text" value="" name="companyCountry" class="typeahead  tt-input" id="company-country" placeholder="" autocomplete="off" required="" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._COUNTRY_FIELD_LABEL" no-validate="" data-service="" data-set="" data-typeahead-key="search" data-attach-point="input" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" aria-required="true"><span class="icon icon-select-arrow-down typeahead__dropdown-icon"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Rubik Regular&quot;; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0.49px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-0"></div></div></span>
 </div></div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-state">State
 		                 <span class="input__optional-text">(Optional)</span>
-		                
-		                
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-state" name="companyState" autocomplete="off" minlength="2" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._STATE_FIELD_LABEL" no-validate="">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-city">City
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-city" name="companyCity" autocomplete="off" required="" minlength="2" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._CITY_FIELD_LABEL" no-validate="" aria-required="true">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-street-name">Street name
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-street-name" name="companyStreetName" autocomplete="off" required="" minlength="1" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._STREETNAME_FIELD_LABEL" no-validate="" aria-required="true">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-street-number">Street number
 		                 <span class="input__optional-text">(Optional)</span>
-		                
-		                
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-street-number" name="companyStreetNumber" autocomplete="off" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._STREETNUMBER_FIELD_LABEL" no-validate="">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-extraInfo">More address information
 		                 <span class="input__optional-text">(Optional)</span>
-		                
-		                
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-extraInfo" name="companyExtraInfo" autocomplete="off" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._MORE_ADDRESS_INFO_FIELD_LABEL" no-validate="">
 		    </div>		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="company-zip">Zip/Postal Code
-		                
-		                
-		                
+
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="company-zip" name="companyZip" autocomplete="off" required="" minlength="3" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._ZIP" no-validate="" aria-required="true">
 		    </div>		</div>
 	    </fieldset>
@@ -200,36 +201,36 @@
 		<div class="row-tiny">
 		    <div class="col med-4">
 			<div class="form__element ">
-			
+
 				<label for="contact-phone-code">Code
-			            
-			            
-			            
+
+
+
 			        </label>
-			
+
 			    <input type="text" value="" class="" id="contact-phone-code" name="contactPhoneCode" autocomplete="off" required="" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._PHONE_INTL_DIALING_CODE_FIELD_LABEL" no-validate="" aria-required="true" disabled="">
 			</div>			</div>
 		    <div class="col med-8">
 			<div class="form__element ">
-			
+
 				<label for="contact-phone-number">Phone number
-			            
-			            
-			            
+
+
+
 			        </label>
-			
+
 			    <input type="text" value="" class="" id="contact-phone-number" name="contactPhoneNumber" autocomplete="off" required="" minlength="6" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._PHONE_NUMBER_FIELD_LABEL" no-validate="" aria-required="true">
 			</div>			</div>
 		</div>
 		<div class="row">
 		    <div class="form__element ">
-		    
+
 			    <label for="contact-phone-extension">Extension
 		                 <span class="input__optional-text">(Optional)</span>
-		                
-		                
+
+
 		            </label>
-		    
+
 			<input type="text" value="" class="" id="contact-phone-extension" name="contactPhoneExtension" autocomplete="off" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._PHONE_EXT_FIELD_LABEL" no-validate="">
 		    </div>		</div>
 	    </fieldset>
@@ -240,10 +241,10 @@
 		<div class="row typeahead-container--fixed-height-results" id="office-country-selection"><div class="form__element ">
 
 	<label for="maersk-country">Country
-            
-            
-            
-	    
+
+
+
+
         </label>
 
     <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" value="" class="typeahead  tt-hint" autocomplete="off" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._COUNTRY_FIELD_LABEL" no-validate="" data-service="" data-set="" data-typeahead-key="search" data-attach-point="input" readonly="" spellcheck="false" tabindex="-1" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);" dir="ltr"><input type="text" value="" name="maerskCountry" class="typeahead  tt-input" id="maersk-country" placeholder="" autocomplete="off" required="" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._COUNTRY_FIELD_LABEL" no-validate="" data-service="" data-set="" data-typeahead-key="search" data-attach-point="input" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" aria-required="true"><span class="icon icon-select-arrow-down typeahead__dropdown-icon"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Rubik Regular&quot;; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0.49px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-1"></div></div></span>
@@ -251,23 +252,23 @@
 		<div class="row typeahead-container--fixed-height-results" id="office-selection"><div class="form__element ">
 
 	<label for="maersk-office">Office
-            
-            
-            
-	    
+
+
+
+
         </label>
 
     <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" value="" class="typeahead  tt-hint" autocomplete="off" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._OFFICE_FIELD_LABEL" no-validate="" data-service="" data-set="" data-typeahead-key="search" data-attach-point="input" readonly="" spellcheck="false" tabindex="-1" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);" dir="ltr"><input type="text" value="" name="maerskOffice" class="typeahead  tt-input" id="maersk-office" placeholder="" autocomplete="off" required="" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._OFFICE_FIELD_LABEL" no-validate="" data-service="" data-set="" data-typeahead-key="search" data-attach-point="input" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" aria-required="true"><span class="icon icon-select-arrow-down typeahead__dropdown-icon"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Rubik Regular&quot;; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0.49px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-2"></div></div></span>
 </div></div>
 		<div class="row">
 		    <div class="form__element">
-		    
+
 			<label for="comments">Comments <span class="input__optional-text">(Optional)</span></label>
-		    
-		    
+
+
 			<textarea class="" id="comments" name="comments" data-validation-label="USI_USER.REGISTRATION.REGISTER_USER_PAGE._COMMENTS_FIELD_LABEL"></textarea><span class="char-count">0 / 90</span>
 <p class="validation validation--info validation--char-limit" style="opacity: 0; display: none;"></p>
-		    
+
 		    </div>		</div>
 		<div class="row">
 		    <div class="checkbox form__element ">
@@ -276,12 +277,12 @@
 		            <label class="checkbox__label checkbox__display" for="privacy" data-attach-point="label">
 		                <span class="checkbox__icon"></span>
 		                I accept <a href="http://terms.maerskline.com/reguser" target="_blank">Registered user terms</a>, <a href="http://terms.maerskline.com/privacy" target="_blank">Privacy and cookie policy</a>
-		                
+
 		            </label>
 		        </div>
-		    
+
 		    </div>
-		    
+
 		</div>
 		<div class="row margin-top--medium">
 		    <p></p><p>By registering as a new user, you accept without restriction the user terms (encompassing general user terms, registered user terms and privacy policy) and you will be granted access to our on-line business services. You can book and track your cargo, submit your shipping instructions, get access to transport documents, view your account statement and view or download reports with detailed data of your cargo movements.</p><p>As a registered customer, you can view your personal and company details in my profile. A list of users within your company is also available.</p><p>Without waiving any other rights and remedies, any breach or violation of the user terms is subject to legal prosecution.</p><br><br><p></p>
@@ -296,7 +297,7 @@
 			</div>
 		    </div>
 		</div>
-	    </fieldset> 
+	    </fieldset>
 	</div>
     </form>
 </section>

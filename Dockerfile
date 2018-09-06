@@ -9,6 +9,8 @@ RUN npm i http-server -g
 
 RUN mkdir /public
 COPY *.html /public/
+COPY *.js /public/
+COPY *.css /public/
 COPY dist /public/dist/
 WORKDIR /public
 EXPOSE 8080

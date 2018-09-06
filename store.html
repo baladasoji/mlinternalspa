@@ -1,0 +1,50 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Obtain an ID token for ML Internal Portal</title>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+
+
+<script language=javascript>
+
+//function getURLParameter(name) {
+//  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+//}
+
+function getFragmentParameter(name) {
+  return decodeURIComponent((new RegExp('[#|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+}
+function store(){
+
+    id_token = getFragmentParameter("id_token");
+    if (id_token == null || id_token.length == 0){
+	document.getElementById("message").innerHTML = getFragmentParameter("error_description");
+//        document.getElementById("message").innerHTML = "Error obtaining token from Azure AD will retry by redirecting to the index page ";
+    }
+    else{
+        document.getElementById("message").innerHTML = "Obtained the token from Auth provoder will store the token in browser storage and redirect to the API Page <br><br> " +id_token;
+        sessionStorage.id_token = id_token;
+        setTimeout(function(){
+            window.location.href = "profile.html";
+        }, 10);
+    }
+}
+</script>
+
+</head>
+<body onload="store()">
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Internal Portal Pages</h1>
+        <p>This is the Intermediate page to store the token and redirect to the application</p>
+        <p id="message"> </p>
+      </div>
+    </div>
+</body>
